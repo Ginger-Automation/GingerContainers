@@ -29,14 +29,14 @@ To Pull Image use : docker pull ghcr.io/ginger-automation/gingerruntime-browsers
 Windows Image used for executing backend automation on Windows <br/>
 To Pull Image use : docker pull ghcr.io/ginger-automation/ginger:latest 
  
-
 ## To view help  
 docker run {image Name} run --help  
 
+## To Execute Runset from source control repository and Save Reports locally
+docker run -v “SourcePath”:”HostPath” {image Name} run --do-not-analyze --env “Environment” --encrypted --url “RepositoryUrl” --encryptionKey "SolutionEncryptionkey" --pass “SourceControl-Password” --runset “RunsetName” --solution “PathToDownloadSolution” --type GIT --user “username”
 
-
-## To Execute Runset from source control repository 
-docker run {image Name} run -r "RunSetName"   -t SourceControlType --url "RepositoryUrl" --user "UserNameforSourcecontrol" --pass "Password for sourcecontrol" --solution "Foldert to dwonload solution "
+## To Execute Runset from loacl folder 
+docker run -v “SourcePath”:”HostPath” {image Name} run --do-not-analyze --env “Environment” --encryptionKey " SolutionEncryptionkey " --runset “RunsetName” --solution “PathToSolution”
 
 ### Arguments to Build run command 
 -s, --solution             Required. Set solution folder
