@@ -35,7 +35,7 @@ docker run {image Name} run --help
 ## To Execute Runset from source control repository and Save Reports locally
 docker run -v “SourcePath”:”HostPath” {image Name} run --do-not-analyze --env “Environment” --encrypted --url “RepositoryUrl” --encryptionKey "SolutionEncryptionkey" --pass “SourceControl-Password” --runset “RunsetName” --solution “PathToDownloadSolution” --type GIT --user “username”
 
-## To Execute Runset from loacl folder 
+## To Execute Runset from local folder 
 docker run -v “SourcePath”:”HostPath” {image Name} run --do-not-analyze --env “Environment” --encryptionKey " SolutionEncryptionkey " --runset “RunsetName” --solution “PathToSolution”
 
 ### Arguments to Build run command 
